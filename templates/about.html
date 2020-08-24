@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+
+{% if name %}
+<h1>Hello {{name}}</h1>
+{% endif %}
+
+<form method="post" action="/about">
+
+    <input type="text" name="contact-name" placeholder="Enter your name">
+    <br>
+    
+    <input type="email" name="contact-email" placeholder="Enter your email">
+    <br>
+
+    <textarea name="contact-msg" placeholder="Enter your message"></textarea>
+
+    <button type="submit">Send</button>
+
+</form>
+
+{% endblock content %}
